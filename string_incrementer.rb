@@ -31,3 +31,4 @@ def increment_string(str)
 end
 
 increment_string("foobar23")
+increment_string("foo099")

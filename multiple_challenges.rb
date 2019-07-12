@@ -99,7 +99,6 @@ end
 #new_value([2,5,4], 3)
 
 #9 Return an array of integers from 1 to n
-
 def one_to_n(n)
 	print int_array = [*1..n]
 	#[*(1..n)]
@@ -243,7 +242,7 @@ end
 #count_duplicate_hash("philadelphia")
 
 =begin
-#28 You have to through search all numbers from  1 to a given number x, inclusive
+#28 You have to search all numbers from  1 to a given number x, inclusive
 that have the given digit d in it. The value of d will always be between 0 - 9. The value of x
 will always be greater than 0. You have to return as an array the count of these numbers,their sum
 and their product.

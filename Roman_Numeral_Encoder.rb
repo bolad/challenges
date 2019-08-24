@@ -39,13 +39,12 @@ def solution_number(number)
 					900 => "CM",
 					1000 => "M" 
 				}
-	result = ''
-
-	roman_map.keys.each do |divisor|
-		quotient, modulus = number.divmod(divisor)
-		result << roman_map[divisor] * quotient
-	end
-	puts result
+	roman_map.map do |ltr, val|
+		amt, num = num.divmod(val)
+		ltr * amt
+	end.join
 
 end
+
+solution_number(82)
 

@@ -306,11 +306,19 @@ def mean_of_two_means(arr, x, y)
 	print mean
 end
 
-mean_of_two_means([2, 4, 8, 10, 3, 24, 7, 30], 2, 4)
+#mean_of_two_means([2, 4, 8, 10, 3, 24, 7, 30], 2, 4)
 
 #34 Write a single line of Ruby code that prints the Fibonacci sequence of any length as an array.
 def fibonacci_sequence(x, y)
   (x..y).inject([0, 1]) {|fib| fib << fib.last(2).inject(:+)}
 end
 
-fibonacci_sequence(1, 20)
+#fibonacci_sequence(1, 20)
+
+#35 Write a function that sorts the keys in a hash by the length of the key as a string.
+def sort_by_key_length(hash)
+  #puts hash.keys.map(&:to_s).sort_by(&:length)
+  puts hash.keys.collect(&:to_s).sort_by {|key| key.length}
+end
+
+sort_by_key_length({ abc: 'hello', 'another_key' => 123, 4567 => 'third' })

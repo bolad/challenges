@@ -12,12 +12,24 @@
 =end
 
 def two_sum(nums, target)
-  # Get indices of all elements of nums array and put them in an array
-  all_array_indices = (0...nums.size).to_a
+  # # Get indices of all elements of nums array and put them in an array
+  # all_array_indices = (0...nums.size).to_a
+  #
+  # # Generate all combinations of indices of each 2 elements and check if the sums of their values equal target
+  # results = all_array_indices.combination(2).select {|first, last| nums[first] + nums[last] == target}
+  # p results.first
 
-  # Generate all combinations of indices of each 2 elements and check if the sums of their values equal target
-  results = all_array_indices.combination(2).select {|first, last| nums[first] + nums[last] == target}
-  p results.first
+  i = 0
+  while i < nums.length
+    j = i + 1
+    while j < nums.length
+      if nums[i] + nums[j] == target
+        p [i, j]
+      end
+      j += 1
+    end
+    i += 1
+  end
 end
 
 two_sum([2, 7, 11, 15], 9)
